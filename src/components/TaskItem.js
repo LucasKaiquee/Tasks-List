@@ -1,4 +1,15 @@
-/*const TaskItem = ({task}) => {
+import { useEffect, useState } from "react";
+
+const TaskItem = ({task}) => {
+
+    useEffect(() => {
+        console.log('component was mounted!');
+
+        return () => {
+            console.log('i will unmount!');
+        }
+    },[])
+
     return(
         <>
             <h1>{task.description}</h1>
@@ -7,11 +18,11 @@
     )
 }
 
-export default TaskItem;*/
-import React from "react";
+export default TaskItem;
+//import React from "react";
 
 
-class TaskItem extends React.Component {
+/*class TaskItem extends React.Component {
     componentDidMount() {
         console.log('component was mounted!');
     }
@@ -31,4 +42,4 @@ class TaskItem extends React.Component {
     }
 }
 
-export default TaskItem;
+export default TaskItem;*/
