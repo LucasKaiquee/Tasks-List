@@ -20,6 +20,10 @@
         display: flex;
         flex-direction: column;
 
+        h3 {
+            margin-bottom: 18px;
+        }
+
         .tasks-list{
             margin-top: 28px;
         }
