@@ -24,14 +24,15 @@ const AddTask = ({fetchTasks}) => {
             if (task.length === 0) {
                 return alert.error("A tarefa precisa de uma descrição para ser salva");
             }
-            await axios.post('https://fsc-taskmanager-api.up.railway.app/tasks', {
+            await axios.post("https://fsc-taskmanager-api.up.railway.app/tasks", {
                 desciption: task,
                 isCompleted: false
             });
 
             await fetchTasks();
+            setTask("");
         } catch (error) {
-            
+            alert.error("Ops! Algo deu errado.")
         }
     }
 
