@@ -40,7 +40,7 @@ const AddTask = ({fetchTasks}) => {
 
     return (
         <div className="add-task-container">
-            <CustomInput label="Adicionar tarefa ..." value={task} onChange={onChange} />
+            <CustomInput label="Adicionar tarefa ..." value={task} onChange={onChange} onEnterPress={handleTaskAddition}/>
             <CustomButton onClick={handleTaskAddition}> <FaPlus size={14} color="#ffff"/> </CustomButton>
         </div>
     )
