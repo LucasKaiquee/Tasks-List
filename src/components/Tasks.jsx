@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useAlert } from "react-alert";
 
 import "./Tasks.scss"
 
@@ -8,14 +9,16 @@ import AddTask from "./AddTask";
 
 const Tasks = () =>{
     const [tasks, setTasks] = useState([]);
+
+    const alert = useAlert();
     
       const fetchTasks = async () => {
         try{
           const {data} = await axios.get('https://fsc-taskmanager-api.up.railway.app/tasks');
 
           setTasks(data);
-        } catch(error) {
-          console.log(error);
+        } catch(_error) {
+            alert.error('Não foi possível recuperar as tarefas.');
         }
       }
     

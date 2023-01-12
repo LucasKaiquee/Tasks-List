@@ -10,7 +10,7 @@ const TaskItem = ({task, fetchTasks}) => {
             await axios.delete(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`)
             await fetchTasks();
             alert.success("A tarefa foi deletado com sucesso.");
-        } catch (error) {
+        } catch (_error) {
             alert.error("Ops! Algo deu errado.");
         }
     }
@@ -23,7 +23,7 @@ const TaskItem = ({task, fetchTasks}) => {
 
             await fetchTasks();
             alert.success("A tarefa foi modificada com sucesso.");
-        } catch (error) {
+        } catch (_error) {
             alert.error("Ops! Algo deu errado.");
         }
     };
