@@ -15,6 +15,19 @@ const TaskItem = ({task, fetchTasks}) => {
         }
     }
 
+    const handleTaskCompletionChange = async(e) => {
+        try {
+            await axios.patch(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`, {
+                isCompleted: e.target.checked,
+            });
+
+            await fetchTasks();
+            alert.success("A tarefa foi modificada com sucesso.");
+        } catch (error) {
+            alert.error("Ops! Algo deu errado.");
+        }
+    };
+
     return(
       <div className="task-item-container">
             <div className="task-description">
@@ -24,13 +37,14 @@ const TaskItem = ({task, fetchTasks}) => {
                     {task.description}
                     <input type="checkbox" 
                         defaultChecked={task.isCompleted}
+                        onChange={handleTaskCompletionChange}
                     />
                     <span className={task.isCompleted ? ' completed' : 'checkmark'}></span>
                 </label>
             </div>
 
             <div className="delete">
-                <AiFillDelete size={18} color="#F97474" onClick={handleTaskDeletion}/>
+                <AiFillDelete size={18} color="#F97474" onClick={(e) => handleTaskCompletionChange(e)}/>
             </div>
       </div>
     )
