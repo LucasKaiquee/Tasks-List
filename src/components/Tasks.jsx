@@ -15,7 +15,7 @@ const Tasks = () =>{
       const fetchTasks = async () => {
         try{
           const {data} = await axios.get('https://fsc-taskmanager-api.up.railway.app/tasks');
-
+          
           setTasks(data);
         } catch(_error) {
             alert.error('Não foi possível recuperar as tarefas.');
@@ -38,7 +38,7 @@ const Tasks = () =>{
                     {tasks
                         .filter((task) => task.isCompleted === false)
                         .map((lastTask) => (
-                            <TaskItem task ={lastTask} fetchTasks={fetchTasks}/>
+                            <TaskItem key={lastTask._id} task ={lastTask} fetchTasks={fetchTasks}/>
                         ))}
                 </div>
             </div>
@@ -47,7 +47,7 @@ const Tasks = () =>{
                 <h3>Tarefas Concluídas</h3>
                 <div className="tasks-list">
                     {tasks.filter(task => task.isCompleted).map(completedTask =>(
-                        <TaskItem task ={completedTask} fetchTasks={fetchTasks}/>
+                        <TaskItem key={completedTask._id} task ={completedTask} fetchTasks={fetchTasks}/>
                     ))}
                 </div>
             </div>
