@@ -4,10 +4,12 @@ import { AiFillDelete } from 'react-icons/ai';
 import axios from 'axios';
 import {useAlert} from 'react-alert'
 
-const TaskItem = ({task}) => {
+const TaskItem = ({task, fetchTasks}) => {
     const handleTaskDeletion = async() => {
         try {
-            await axios.delete(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`);
+            await axios.delete(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`)
+            await fetchTasks();
+            alert.success("A tarefa foi deletado com sucesso.");
         } catch (error) {
             alert.error("Ops! Algo deu errado.");
         }
