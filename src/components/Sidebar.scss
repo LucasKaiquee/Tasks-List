@@ -1,0 +1,23 @@
+.sidebar-container {
+    max-width: 181px;
+    height: 100vh;
+    background: #111;
+    padding: 56px 28px;
+    position: relative;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .sign-out {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: black;
+    }
+}
