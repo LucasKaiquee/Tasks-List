@@ -5,6 +5,9 @@ import axios from 'axios';
 import {useAlert} from 'react-alert'
 
 const TaskItem = ({task, fetchTasks}) => {
+
+    const alert = useAlert();
+
     const handleTaskDeletion = async() => {
         try {
             await axios.delete(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`)
@@ -44,7 +47,7 @@ const TaskItem = ({task, fetchTasks}) => {
             </div>
 
             <div className="delete">
-                <AiFillDelete size={18} color="#F97474" onClick={(e) => handleTaskCompletionChange(e)}/>
+                <AiFillDelete size={18} color="#F97474" onClick={(e) => handleTaskDeletion(e)}/>
             </div>
       </div>
     )
