@@ -9,7 +9,7 @@ import CustomButton from "./CustomButton";
 import "./AddTask.scss"
 
 
-const AddTask = () => {
+const AddTask = ({fetchTasks}) => {
     const [task, setTask] = useState("")
 
     const alert = useAlert()
@@ -24,10 +24,12 @@ const AddTask = () => {
             if (task.length === 0) {
                 return alert.error("A tarefa precisa de uma descrição para ser salva");
             }
-            await axios.post('https://fsc-task-manager-backend.herokuapp.com/tasks', {
+            await axios.post('https://fsc-taskmanager-api.up.railway.app/tasks', {
                 desciption: task,
                 isCompleted: false
             });
+
+            await fetchTasks();
         } catch (error) {
             
         }

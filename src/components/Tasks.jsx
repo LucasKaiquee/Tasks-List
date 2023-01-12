@@ -11,7 +11,7 @@ const Tasks = () =>{
     
       const fetchTasks = async () => {
         try{
-          const {data} = await axios.get('https://fsc-task-manager-backend.herokuapp.com/tasks');
+          const {data} = await axios.get('https://fsc-taskmanager-api.up.railway.app/tasks');
 
           setTasks(data);
         } catch(error) {
@@ -30,7 +30,7 @@ const Tasks = () =>{
 
             <div className="last-tasks">
             <h3>Últimas Tarefas </h3>
-                <AddTask />
+                <AddTask fetchTasks={fetchTasks} />
                 <div className="tasks-list">
                     {tasks
                         .filter((task) => task.isCompleted === false)
