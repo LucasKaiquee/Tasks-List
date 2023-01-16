@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import axios from "axios";
 import { useAlert } from "react-alert";
 
@@ -12,15 +12,15 @@ const Tasks = () =>{
 
     const alert = useAlert();
     
-      const fetchTasks = async () => {
+      const fetchTasks = useCallback(async() =>{
         try{
-          const {data} = await axios.get('https://fsc-taskmanager-api.up.railway.app/tasks');
-
-          setTasks(data);
-        } catch(_error) {
-            alert.error('Não foi possível recuperar as tarefas.');
-        }
-      }
+            const {data} = await axios.get('https://fsc-taskmanager-api.up.railway.app/tasks');
+  
+            setTasks(data);
+          } catch(_error) {
+              alert.error('Não foi possível recuperar as tarefas.');
+          }
+      }, [alert]);
 
       const lastTasks = useMemo(() =>{
           return tasks.filter(task =>  task.isCompleted === false);
@@ -32,7 +32,7 @@ const Tasks = () =>{
     
       useEffect(() =>{
         fetchTasks()
-      }, [])
+      }, [fetchTasks])
     
 
     return (
