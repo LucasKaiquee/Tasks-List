@@ -1,26 +1,25 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
-import CustomButton from "../components/CustomButton"
+import CustomButton from '../components/CustomButton'
 
-import "./Login.scss"
-import logo from "../assets/images/logo.png"
+import './Login.scss'
+import logo from '../assets/images/logo.png'
 
 const Login = () => {
+  const navigate = useNavigate()
 
-    const navigate = useNavigate();
+  const handleSignInClick = () => {
+    navigate('/')
+  }
 
-    const handleSignInClick = () => {
-        navigate('/');
-    }
-
-    return(
+  return (
         <div className="login-container">
             <img src={logo} alt="React Pro" />
             <div className="button-container">
                 <CustomButton onClick={handleSignInClick}>Entrar</CustomButton>
             </div>
         </div>
-    )
+  )
 }
 
-export default Login;
+export default Login
