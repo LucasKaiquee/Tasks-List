@@ -1,0 +1,3 @@
+{
+    "*.jsx": "yarn eslint --fix --ext .jsx"
+}

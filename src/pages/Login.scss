@@ -9,4 +9,15 @@
         width: 405.76px;
         color: black;
     }
+
+    img {
+        width: 500px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 560px) {
+        img {
+            width: 280px;
+        }
+    }
 }
