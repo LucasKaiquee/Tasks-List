@@ -9,7 +9,7 @@ const TaskItem = ({ task, fetchTasks }) => {
 
   const handleTaskDeletion = async () => {
     try {
-      await axios.delete(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`)
+      await axios.delete(`https://fsc-task-manager-backend.herokuapp.com/tasks/${task._id}`)
       await fetchTasks()
       alert.success('A tarefa foi deletada com sucesso.')
     } catch (_error) {
@@ -19,7 +19,7 @@ const TaskItem = ({ task, fetchTasks }) => {
 
   const handleTaskCompletionChange = async (e) => {
     try {
-      await axios.patch(`https://fsc-taskmanager-api.up.railway.app/tasks/${task._id}`, {
+      await axios.patch(`https://fsc-task-manager-backend.herokuapp.com/tasks/${task._id}`, {
         isCompleted: e.target.checked
       })
 
