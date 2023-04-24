@@ -8,6 +8,7 @@ Este projeto é um gerenciador de tarefas com recursos para adicionar, mudar o s
 2. Instale as dependências do projeto com `npm install`.
 3. Inicie o servidor com `npm start`.
 4. Abra o navegador em `http://localhost:3000` para acessar a aplicação.
+5. Ou pode ser acessado [aqui](https://task-list-02b9a4.netlify.app/).
 
 ## Recursos
 
