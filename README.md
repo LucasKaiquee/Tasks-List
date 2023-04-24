@@ -20,6 +20,7 @@ Este projeto é um gerenciador de tarefas com recursos para adicionar, mudar o s
 
 - React JS
 - JavaScript
+- Html
 - SASS
 - Axios
 - Prettier
