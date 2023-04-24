@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Gerenciador de Tarefas em React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é um gerenciador de tarefas com recursos para adicionar, mudar o status e deletar tarefas no banco de dados, utilizando React JS, JavaScript, SASS e acessando uma API. O projeto utiliza o Prettier, Husky e Axios para manter o código organizado e bem estruturado, além de Commits Semânticos.
 
-## Available Scripts
+## Como usar
 
-In the project directory, you can run:
+1. Clone este repositório em seu computador.
+2. Instale as dependências do projeto com `npm install`.
+3. Inicie o servidor com `npm start`.
+4. Abra o navegador em `http://localhost:3000` para acessar a aplicação.
 
-### `npm start`
+## Recursos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Adicionar tarefa
+- Mudar status da tarefa
+- Deletar tarefa
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tecnologias utilizadas
 
-### `npm test`
+- React JS
+- JavaScript
+- SASS
+- Axios
+- Prettier
+- Husky
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tópicos abordados no React
 
-### `npm run build`
+Este projeto abordou os seguintes tópicos em React:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Componentes
+- Propriedades
+- Estado
+- Ciclo de vida dos componentes
+- Eventos
+- Manipulação de formulários
+- Requisições HTTP
+- Rotas
+- Estilização com CSS/SASS
+- Hooks (useEffect, useState)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Commits Semânticos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Este projeto utiliza o padrão de commits semânticos para manter o histórico de alterações mais organizado e legível. Cada commit deve ser feito com uma mensagem clara e concisa, seguindo as seguintes regras:
 
-### `npm run eject`
+- feat: nova funcionalidade
+- fix: correção de bugs
+- docs: alterações na documentação
+- style: alterações no estilo (ex: CSS)
+- refactor: refatoração de código
+- test: adição de testes
+- chore: outras alterações (ex: configurações)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Autor
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Lucas Kaique
